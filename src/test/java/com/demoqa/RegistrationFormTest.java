@@ -16,23 +16,25 @@ public class RegistrationFormTest {
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1600x720";
-        Configuration.pageLoadStrategy="eager";
+        Configuration.pageLoadStrategy = "eager";
     }
 
     @Test
-    void FullFormTest() {
+    void fullFormTest() {
 
         open("/automation-practice-form");
+        executeJavaScript("$('#fixedban').remove()");
+        executeJavaScript("$('footer').remove()");
 
-        $("#firstName").setValue ("Test");
+        $("#firstName").setValue("Test");
 
-        $("#lastName").setValue ("Testov");
+        $("#lastName").setValue("Testov");
 
-        $("#userEmail").setValue ("Testov@mail.ru");
+        $("#userEmail").setValue("Testov@mail.ru");
 
         $("#genterWrapper").$(byText("Male")).click();
 
-        $("#userNumber").setValue ("9998887777");
+        $("#userNumber").setValue("9998887777");
 
         $("#dateOfBirthInput").click();
 
@@ -42,16 +44,13 @@ public class RegistrationFormTest {
 
         $(".react-datepicker__day--020").click();
 
-        $("#subjectsInput").setValue ("Maths").pressEnter();
+        $("#subjectsInput").setValue("Maths").pressEnter();
 
         $("#hobbiesWrapper").$(byText("Sports")).click();
 
         $("#uploadPicture").uploadFile(new File("src/test/resourses/images.jpg"));
 
         $("#currentAddress").setValue("10, Lomonosova st, Moscow");
-
-        //$(byText("Select State")).click();
-        //$(byText("Haryana")).click();
 
         $("#state").click();
         $("#stateCity-wrapper").$(byText("Haryana")).click();
@@ -67,19 +66,8 @@ public class RegistrationFormTest {
 
         $("#closeLargeModal").scrollTo();
 
-        $(".table-responsive").shouldHave(text("Test"),
-                text("Testov"),
-                text("Testov@mail.ru"),
-                text("Male"),
-                text("9998887777"),
-                text("20 May,1996"),
-                text("Maths"),
-                text("Sports"),
-                text("images.jpg"),
-                text("10, Lomonosova st, Moscow"),
-                text("Haryana Panipat"));
+        $(".table-responsive").shouldHave(text("Test"), text("Testov"), text("Testov@mail.ru"), text("Male"), text("9998887777"), text("20 May,1996"), text("Maths"), text("Sports"), text("images.jpg"), text("10, Lomonosova st, Moscow"), text("Haryana Panipat"));
 
-        sleep(5000);
 
     }
 }
