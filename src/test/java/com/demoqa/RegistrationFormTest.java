@@ -48,7 +48,7 @@ public class RegistrationFormTest {
 
         $("#hobbiesWrapper").$(byText("Sports")).click();
 
-        $("#uploadPicture").uploadFile(new File("src/test/resourses/images.jpg"));
+        $("#uploadPicture").uploadFromClasspath("images.jpg");
 
         $("#currentAddress").setValue("10, Lomonosova st, Moscow");
 
