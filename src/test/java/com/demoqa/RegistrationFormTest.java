@@ -66,7 +66,19 @@ public class RegistrationFormTest {
 
         $("#closeLargeModal").scrollTo();
 
-        $(".table-responsive").shouldHave(text("Test"), text("Testov"), text("Testov@mail.ru"), text("Male"), text("9998887777"), text("20 May,1996"), text("Maths"), text("Sports"), text("images.jpg"), text("10, Lomonosova st, Moscow"), text("Haryana Panipat"));
+        $(".table-responsive").shouldHave(
+                text("Test"),
+                text("Testov"),
+                text("Testov@mail.ru"),
+                text("Male"),
+                text("9998887777"),
+                text("20 May,1996"),
+                text("Maths"),
+                text("Sports"),
+                text("images.jpg"),
+                text("10, Lomonosova st, Moscow"),
+                text("Haryana Panipat")
+        );
 
 
     }
