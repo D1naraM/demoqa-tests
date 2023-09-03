@@ -28,8 +28,8 @@ public class RegistrationPage {
             currentAddress = $("#currentAddress"),
             state = $("#state"),
             stateDropdown = $("#stateCity-wrapper"),
-            sity = $("#city"),
-            sityDropdown = $("#stateCity-wrapper"),
+            city = $("#city"),
+            cityDropdown = $("#stateCity-wrapper"),
             submit = $("#submit"),
             tableTitle = $(".modal-content");
 
@@ -110,9 +110,9 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage setSity(String value) {
-        sity.click();
-        sityDropdown.$(byText(value)).click();
+    public RegistrationPage setCity(String value) {
+        city.click();
+        cityDropdown.$(byText(value)).click();
 
         return this;
     }

@@ -5,11 +5,7 @@ import com.demoqa.pages.RegistrationPage;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-
-public class RegistrationFormTestWithPG {
+public class RegistrationFormWithPOTest {
 
     @BeforeAll
     static void beforeAll() {
@@ -23,31 +19,18 @@ public class RegistrationFormTestWithPG {
     void fullFormTest() {
 
         registrationPage.openPage()
-
                 .setFirstName("Test")
-
                 .setLastName("Testov")
-
                 .setUserEmail("Testov@mail.ru")
-
                 .setGender("Male")
-
                 .setUserNumber("9998887777")
-
                 .setBitrhDate("20", "May", "1996")
-
                 .setSubject("Maths")
-
                 .setHobbies("Sports")
-
                 .uploadPicture("images.jpg")
-
                 .setCurrentAddress("10, Lomonosova st, Moscow")
-
                 .setState("Haryana")
-
-                .setSity("Panipat")
-
+                .setCity("Panipat")
                 .submitAction()
 
                 .checkTableTitle("Thanks for submitting the form")
