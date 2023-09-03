@@ -91,7 +91,6 @@ public class RandomUtils {
     }
 
     public String randomCity(String stateValue) {
-        String[] cities;
 
         switch (stateValue) {
             case "NCR": {
