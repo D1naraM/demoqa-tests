@@ -59,7 +59,7 @@ public class TextBoxPage {
     }
 
     public TextBoxPage submitForm() {
-        submit.submit();
+        submit.click();
 
         return this;
     }
