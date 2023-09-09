@@ -14,7 +14,7 @@ import static org.openqa.selenium.By.linkText;
 public class LyambdaTest {
 
     @Test
-    public void tetIssueSearch() {
+    public void issueSearchTest() {
 
         SelenideLogger.addListener("allure", new AllureSelenide());
 
