@@ -2,12 +2,14 @@ package com.demoqa.tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
+@Tag("jenkins")
 public class RegistrationFormTest {
 
     @BeforeAll
@@ -23,6 +25,7 @@ public class RegistrationFormTest {
         open("/automation-practice-form");
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         $("#firstName").setValue("Test");
 
