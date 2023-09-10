@@ -25,7 +25,6 @@ public class RegistrationFormTest {
         open("/automation-practice-form");
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         $("#firstName").setValue("Test");
 
