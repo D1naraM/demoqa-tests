@@ -17,6 +17,7 @@ public class RegistrationFormTest {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1600x720";
         Configuration.pageLoadStrategy = "eager";
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
     }
 
     @Test
