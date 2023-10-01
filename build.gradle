@@ -44,12 +44,12 @@ tasks.withType(Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform()
 }
-//test {
- //   useJUnitPlatform()
-//}
+test {
+   useJUnitPlatform()
+}
 
-task jenkins_test(type: Test) {
+task simple_test(type: Test) {
     useJUnitPlatform{
-        includeTags("jenkins")
+        includeTags("simple")
     }
 }
